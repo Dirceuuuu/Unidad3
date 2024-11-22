@@ -1,0 +1,99 @@
+/* Fondo */
+body {
+    background-color: #091057;
+    font-family: 'Times New Roman', Times, serif; 
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Encabezados */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #ffffff;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 1rem 0;
+}
+
+/* Contenedor de las prácticas */
+.bento {
+    display: flex;
+    flex-direction: column; /* Cada barra se coloca verticalmente */
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Barras horizontales */
+.grid {
+    background-color: #024CAA;
+    color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribución horizontal */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.grid h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.grid p {
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Efecto al pasar el cursor */
+.grid:hover {
+    background-color: #0366d6;
+    transform: translateX(10px); /* Movimiento horizontal */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Espacio entre texto y acciones */
+.grid div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Botón dentro de las barras */
+.grid a {
+    background-color: #ffffff;
+    color: #024CAA;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.grid a:hover {
+    background-color: #0366d6;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .grid {
+        flex-direction: column; 
+    }
+
+    .grid div {
+        margin-bottom: 1rem;
+    }
+}
