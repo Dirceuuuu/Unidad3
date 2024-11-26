@@ -107,8 +107,8 @@ const Horario = {
     ],
 
     imprimirHorario: function () {
-        let mensaje = ""; // Mensaje acumulado
-        let limitePorAlerta = 2; // Número de materias por alerta
+        let mensaje = "";
+        let limitePorAlerta = 2;
         let contador = 0;
 
         this.clases.forEach((materia) => {
@@ -116,22 +116,19 @@ const Horario = {
             for (let dia in materia.horarios) {
                 mensaje += `  ${dia}: ${materia.horarios[dia] || "Sin clase"}\n`;
             }
-            mensaje += "\n"; // Espacio entre materias
+            mensaje += "\n";
             contador++;
 
-            // Cuando alcanza el límite por alerta o es la última materia, muestra y reinicia
             if (contador === limitePorAlerta || materia === this.clases[this.clases.length - 1]) {
                 alert(mensaje);
-                mensaje = ""; // Reinicia el mensaje
+                mensaje = "";
                 contador = 0;
             }
         });
     }
 };
 
-// Cuadro de confirmación para decidir si mostrar el horario
-if (confirm("¿Quieres mostrar el horario del semestre?")) {
-    Horario.imprimirHorario(); // Muestra el horario si seleccionas "Aceptar"
-} else {
-    alert("Has cancelado la acción."); // Mensaje si seleccionas "Cancelar"
-}
+// Vincular botón a este script
+document.getElementById("btnHorario").addEventListener("click", function () {
+    Horario.imprimirHorario();
+});

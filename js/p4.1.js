@@ -7,7 +7,6 @@ const Materias = {
         { materia: "FUNDAMENTOS ING. DE SW.", grupo: "B", calificacion: 0 },
     ],
 
-    // Método para pedir calificaciones
     pedirCalificaciones: function () {
         this.listaMaterias.forEach((materia) => {
             materia.calificacion = parseFloat(
@@ -16,7 +15,6 @@ const Materias = {
         });
     },
 
-    // Método para calcular la suma de calificaciones
     calcularSuma: function () {
         let suma = 0;
         this.listaMaterias.forEach((materia) => {
@@ -25,14 +23,12 @@ const Materias = {
         return suma;
     },
 
-    // Método para calcular el promedio de calificaciones
     calcularPromedio: function () {
         const suma = this.calcularSuma();
         const promedio = suma / this.listaMaterias.length;
         return promedio;
     },
 
-    // Método principal para ejecutar el programa
     ejecutar: function () {
         if (confirm("¿Quieres ingresar las calificaciones y calcular los resultados?")) {
             this.pedirCalificaciones();
@@ -46,4 +42,7 @@ const Materias = {
     },
 };
 
-Materias.ejecutar();
+// Vincular botón a este script
+document.getElementById("btnCalificaciones").addEventListener("click", function () {
+    Materias.ejecutar();
+});
