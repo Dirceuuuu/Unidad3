@@ -11,18 +11,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Agregar un nuevo enlace al menú
+    // Agregar un nuevo enlace al menú pidiendo el nombre y URL mediante prompt
     agregarBoton.addEventListener('click', () => {
-        // Crear el nuevo elemento <li> con el enlace
-        const nuevoEnlace = document.createElement('li');
-        const enlace = document.createElement('a');
-        enlace.href = "https://pelicula6.com";
-        enlace.textContent = "Pelicula 6";
+        // Pedir al usuario el nombre de la película y la URL
+        const nombrePelicula = prompt("Introduce el nombre de la película:");
+        const urlPelicula = prompt("Introduce la URL de la película:");
 
-        // Agregar el enlace al nuevo <li>
-        nuevoEnlace.appendChild(enlace);
+        // Verificar si el usuario proporcionó ambos datos
+        if (nombrePelicula && urlPelicula) {
+            // Crear el nuevo elemento <li> con el enlace
+            const nuevoEnlace = document.createElement('li');
+            const enlace = document.createElement('a');
+            enlace.href = urlPelicula;
+            enlace.textContent = nombrePelicula;
 
-        // Agregar el nuevo <li> al final del menú
-        menuList.appendChild(nuevoEnlace);
+            // Agregar el enlace al nuevo <li>
+            nuevoEnlace.appendChild(enlace);
+
+            // Agregar el nuevo <li> al final del menú
+            menuList.appendChild(nuevoEnlace);
+        } else {
+            alert("Por favor, ingresa tanto el nombre como la URL de la película.");
+        }
     });
 });
