@@ -20,10 +20,10 @@ function determinarPar() {
 // Función para obtener nombres de una lista de objetos
 const obtenerNombres = () => {
     const lista = [
-        { nombre: "Juan" },
-        { nombre: "Ana" },
-        { nombre: "Carlos" },
-        { nombre: "Laura" }
+        { nombre: "Danna" },
+        { nombre: "Arthur" },
+        { nombre: "Alan" },
+        { nombre: "Hector" }
     ];
 
     const nombres = lista.map(persona => persona.nombre);
