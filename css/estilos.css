@@ -44,6 +44,7 @@ h2 {
     justify-content: space-between; /* Distribución horizontal */
     transition: background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    
 }
 
 .grid h3 {
@@ -92,26 +93,6 @@ h2 {
     gap: 0.5rem; 
 }
 
-/* Botón centrado y estilizado */
-#cambiar-btn {
-    background-color: #0366d6;
-    color: white;
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    display: block;
-    margin: 2rem auto; /* Centra el botón */
-}
-
-#cambiar-btn:hover {
-    background-color: #024CAA;
-    transform: scale(1.1);
-}
-
 /* Responsividad */
 @media (max-width: 768px) {
     .grid {
@@ -121,66 +102,4 @@ h2 {
     .grid div {
         margin-bottom: 1rem;
     }
-}
-
-/* Estilo base para el contenedor de prácticas */
-.bento {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 2rem;
-    padding: 2rem;
-}
-
-/* Estilo de cada uno de los elementos .grid */
-.grid {
-    background-color: #fff; /* Fondo blanco por defecto */
-    border-radius: 1rem; /* Bordes redondeados */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    padding: 1rem;
-    width: calc(33% - 2rem); /* 3 elementos por fila con espacio entre ellos */
-    margin: 1rem; /* Margen entre los elementos */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Efecto al pasar el ratón por encima de cada .grid */
-.grid:hover {
-    transform: scale(1.05); /* Le da un pequeño efecto de escala */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
-}
-
-/* Estilo para los encabezados */
-header {
-    text-align: center;
-    padding: 2rem;
-    background-color: #f8f9fa;
-    margin-bottom: 2rem;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    color: #333;
-}
-
-header .personal-info {
-    font-size: 1.2rem;
-    color: #666;
-}
-
-/* Estilo para los enlaces */
-a {
-    color: #fff;
-    background-color: #007bff;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    text-align: center;
-    display: inline-block;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-/* Efecto hover para los enlaces */
-a:hover {
-    background-color: #0056b3;
 }
